@@ -4,28 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".InsertActivity"
     android:orientation="vertical">
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextMainCountry"
+        android:id="@+id/editTextName"
+        android:hint="Név"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextCountry"
         android:hint="Ország"
         android:textSize="25sp"/>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextPopulation"
+        android:hint="Lakosság"
+        android:textSize="25sp"
+        android:inputType="number"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonSearch"
-        android:text="Keresés"
+        android:id="@+id/buttonInsert"
+        android:text="Felvétel"
         android:textSize="25sp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonNewRecord"
-        android:text="Új felvétele"
+        android:id="@+id/buttonInsertBack"
+        android:text="Felvétel"
         android:textSize="25sp"/>
 
 </LinearLayout>

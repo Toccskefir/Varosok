@@ -8,12 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText editTextCountry;
+    private EditText editTextMainCountry;
     private Button buttonSearch;
     private Button buttonNewRecord;
 
     public void init() {
-        editTextCountry = findViewById(R.id.editTextCountry);
+        editTextMainCountry = findViewById(R.id.editTextMainCountry);
         buttonSearch = findViewById(R.id.buttonSearch);
         buttonNewRecord = findViewById(R.id.buttonNewRecord);
     }

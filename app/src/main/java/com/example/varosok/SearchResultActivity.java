@@ -9,10 +9,10 @@ import android.widget.TextView;
 
 public class SearchResultActivity extends AppCompatActivity {
     private TextView textViewCities;
-    private Button buttonBack;
+    private Button buttonSearchBack;
     public void init() {
         textViewCities = findViewById(R.id.textViewCities);
-        buttonBack = findViewById(R.id.buttonBack);
+        buttonSearchBack = findViewById(R.id.buttonSearchBack);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class SearchResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search_result);
         init();
 
-        buttonBack.setOnClickListener(new View.OnClickListener() {
+        buttonSearchBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
