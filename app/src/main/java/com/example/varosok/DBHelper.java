@@ -1,5 +1,6 @@
 package com.example.varosok;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -27,5 +28,16 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
+    }
+
+    public boolean dataRecord(String name, String country, int population) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_NAME, name);
+        values.put(COL_COUNTRY, country);
+        values.put(COL_POPULATION, population);
+        long result = db.insert(TABLE_NAME, null, values);
+
+        return result != -1;
     }
 }
